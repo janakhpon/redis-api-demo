@@ -1,0 +1,30 @@
+{
+  "name": "redis-api-demo",
+  "version": "1.0.0",
+  "description": "redis api end point",
+  "main": "server.js",
+  "scripts": {
+    "test": "demo works",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janakhpon/redis-api-demo.git"
+  },
+  "keywords": [
+    "redis",
+    "node",
+    "crud"
+  ],
+  "author": "janakhpon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janakhpon/redis-api-demo/issues"
+  },
+  "homepage": "https://github.com/janakhpon/redis-api-demo#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "redis": "^2.8.0"
+  }
+}
