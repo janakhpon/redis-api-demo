@@ -1,14 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const redis = require("redis");
-var client;
-
-if (process.env.NODE_ENV === "production") {
-  client = redis.createClient(process.env.REDIS_PORT, process.env.REDIS_HOST);
-  client.auth(process.env.REDIS_PASSWORD);
-} else {
-  client = redis.createClient();
-}
+const client = require('./config/connection');
 
 client.on("connect", function() {
   console.log("CONNECTED TO REDIS");
@@ -23,5 +15,5 @@ app.use(
 );
 port = process.env.PORT || 3200;
 app.listen(port, () => {
-  console.log(`SERVER RUNNING ON PORT : ${port}`);
+  console.log(`SERVER RUNNING ON PORT ==> http://localhost:${port}`);
 });
